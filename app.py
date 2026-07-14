@@ -272,7 +272,7 @@ with col_r:
     tenor_pinjaman = st.selectbox(
         "Tenor Pinjaman", TENOR_OPTIONS,
         index=TENOR_OPTIONS.index(360),
-        format_func=lambda x: f"{x} bulan  (~{x // 12} tahun)",
+        format_func=lambda x: f"{x} hari (~{x // 30} bulan)",
     )
     riwayat_kredit = st.selectbox("Riwayat Kredit", CATEGORY_OPTIONS["Riwayat_Kredit"],
                                    help="Riwayat pembayaran kredit sebelumnya")
