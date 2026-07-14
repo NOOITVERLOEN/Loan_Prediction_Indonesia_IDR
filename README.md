@@ -1,0 +1,2 @@
+# Loan_Prediction_Indonesia_IDR
+Loan_Prediction_Indonesia
