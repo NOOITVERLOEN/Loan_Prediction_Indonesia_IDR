@@ -1,0 +1,35 @@
+{
+  "model_family": "RandomForestClassifier",
+  "best_params": {
+    "class_weight": null,
+    "max_depth": 8,
+    "min_samples_leaf": 4,
+    "min_samples_split": 5,
+    "n_estimators": 150
+  },
+  "best_cv_macro_f1": 0.733,
+  "oof_accuracy": 0.7899,
+  "oof_balanced_accuracy": 0.718,
+  "oof_precision": 0.8084,
+  "oof_recall": 0.91,
+  "oof_f1": 0.8562,
+  "oof_macro_f1": 0.7332,
+  "oof_roc_auc": 0.7596,
+  "confusion_matrix_oof": [
+    [
+      101,
+      91
+    ],
+    [
+      38,
+      384
+    ]
+  ],
+  "n_train": 614,
+  "n_test": 367,
+  "test_has_label": false,
+  "currency": "IDR",
+  "income_min_train": 28083.0,
+  "income_median_train": 713776.5,
+  "loan_max_train": 131054000.0
+}
