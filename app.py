@@ -272,7 +272,7 @@ with col_r:
     tenor_pinjaman = st.selectbox(
         "Tenor Pinjaman", TENOR_OPTIONS,
         index=TENOR_OPTIONS.index(360),
-        format_func=lambda x: f"{x} Hari  (~{x // 12} Bulan)",
+        format_func=lambda x: f"{x} bulan  (~{x // 12} tahun)",
     )
     riwayat_kredit = st.selectbox("Riwayat Kredit", CATEGORY_OPTIONS["Riwayat_Kredit"],
                                    help="Riwayat pembayaran kredit sebelumnya")
@@ -391,7 +391,7 @@ if predict_btn:
         ("Rasio Beban Pinjaman", f"{loan_income_ratio:.3f}  ({lr_label})",
          "✅ Aman" if loan_income_ratio < 0.5 else
          "⚠️ Perlu Perhatian" if loan_income_ratio < 1 else "❌ Terlalu Tinggi"),
-        ("Tenor", f"{tenor_pinjaman} bulan (~{tenor_pinjaman // 12} thn)",
+        ("Tenor", f"{tenor_pinjaman} hari (~{tenor_pinjaman // 360} thn)",
          "✅ Standar" if tenor_pinjaman == 360 else "◇ Non-Standar"),
     ]
     st.markdown(render_table(["Faktor", "Nilai", "Status"], fact_rows), unsafe_allow_html=True)
